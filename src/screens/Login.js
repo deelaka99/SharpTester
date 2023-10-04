@@ -1,6 +1,7 @@
 import {View, Text} from 'react-native';
 import LoginInput from '../components/login/LoginInput';
 import LoginBtn from '../components/login/LoginBtn';
+import GoogleBtn from '../components/login/GoogleBtn';
 
 export default function Login() {
   return (
@@ -29,12 +30,12 @@ export default function Login() {
 
         <View className="w-full h-1/6">
           <View className="flex items-center justify-center w-full h-1/2">
-            <Text className="text-primary-blue text-lg">
-              - Or Login with -
-            </Text>
+            <Text className="text-primary-blue text-lg">- Or Login with -</Text>
           </View>
 
-          <View className="w-full h-1/2 bg-yellow"></View>
+          <View className="pl-3 pr-3 flex items-center justify-center w-full h-1/2">
+            <GoogleBtn />
+          </View>
         </View>
       </View>
     </View>
