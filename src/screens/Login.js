@@ -1,9 +1,7 @@
-import {View, Text} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import LoginInput from '../components/login/LoginInput';
-import LoginBtn from '../components/login/LoginBtn';
-import GoogleBtn from '../components/login/GoogleBtn';
 
-export default function Login() {
+export default function Login({navigation}) {
   return (
     <View className="flex items-center justify-center bg-ternary-blue h-full w-full p-2">
       <View className="flex items-center justify-center w-full h-3/4">
@@ -21,7 +19,11 @@ export default function Login() {
             Forgot password
           </Text>
           <View className="pl-3 pr-3 flex items-center justify-center w-full h-1/6">
-            <LoginBtn />
+            <TouchableOpacity
+              onPress={() => navigation.navigate('home')}
+              className="flex items-center justify-center bg-primary-blue h-full w-full rounded-full">
+              <Text className="text-xl text-ternary-blue p-3">Login</Text>
+            </TouchableOpacity>
           </View>
           <Text className="font-inter font-semibold text-red text-xl text-center w-full h-1/6 pt-3">
             {/*error*/}
@@ -34,7 +36,11 @@ export default function Login() {
           </View>
 
           <View className="pl-3 pr-3 flex items-center justify-center w-full h-1/2">
-            <GoogleBtn />
+            <TouchableOpacity className="flex items-center justify-center bg-primary-blue h-full w-full rounded-full">
+              <Text className="text-xl text-ternary-blue">
+                Sign in with Google
+              </Text>
+            </TouchableOpacity>
           </View>
         </View>
       </View>
