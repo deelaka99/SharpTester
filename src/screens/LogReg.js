@@ -23,8 +23,12 @@ export default function LogReg({navigation}) {
         <Image source={image} className="h-full w-full" resizeMode="center" />
       </View>
       <View className="flex justify-center w-full h-1/5 pr-7 pl-7 pt-10">
-        <Text className="text-4xl font-bold text-left text-blue2">Welcome!</Text>
-        <Text className="text-xl font-light text-blue2">Log in with your data that you entered during your registration.</Text>
+        <Text className="text-4xl font-bold text-left text-blue2">
+          Welcome!
+        </Text>
+        <Text className="text-xl font-light text-blue2">
+          Log in with your data that you entered during your registration.
+        </Text>
       </View>
       <View className="flex items-center justify-center h-2/5 w-full">
         <TouchableOpacity
@@ -35,7 +39,9 @@ export default function LogReg({navigation}) {
           </Text>
         </TouchableOpacity>
         <Text>&nbsp;</Text>
-        <TouchableOpacity className="flex items-center justify-center w-5/6 h-1/5 bg-white rounded-full border border-primary-blue">
+        <TouchableOpacity
+          onPress={() => navigation.navigate('register')}
+          className="flex items-center justify-center w-5/6 h-1/5 bg-white rounded-full border border-primary-blue">
           <Text className="font-inter text-primary-blue text-2xl shadow-md">
             Register
           </Text>
