@@ -3,6 +3,8 @@ import {View, BackHandler} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import BrandName from '../components/splash/BrandName';
 import DevelopedBy from '../components/splash/DevelopedBy';
+import {auth} from "../config/firebase";
+
 
 export default function Splash() {
   const navigation = useNavigation();
