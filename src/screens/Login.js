@@ -69,22 +69,22 @@ export default function Login({navigation}) {
                           setErrortext('');
                         } else {
                           logout();
-                          setErrortext(currentUser.email, ' is blocked');
+                          setErrortext('Your account is blocked');
                         }
                       }
                     })
                     .catch(error => {
                       console.log('Blocked status getting error :', error);
-                      setErrortext(currentUser.email, ' is blocked');
+                      setErrortext('Your account is blocked');
                     });
                 } else {
                   logout();
-                  setErrortext("User type isn't match!");
+                  setErrortext("Your account type isn't match!");
                 }
               } else {
                 // If the lab doesn't exist for the user, show an error
                 logout();
-                setErrortext('User not found for the user!');
+                setErrortext('Your account is not found! Register to the app');
               }
             })
             .catch(error => {
@@ -94,7 +94,7 @@ export default function Login({navigation}) {
         })
         .catch(e => {
           console.log('Sign in errors: ', e);
-          setErrortext('Sign in errors');
+          setErrortext("Email or password doesn't match");
         });
     }
   };
@@ -144,7 +144,7 @@ export default function Login({navigation}) {
 
         <View className="flex flex-col gap-4">
           {errortext != '' ? (
-            <Text className="text-primary-blue text-center"> {errortext} </Text>
+            <Text className="text-red text-center font-semibold"> {errortext} </Text>
           ) : null}
           <TouchableOpacity
             onPress={handleSubmitPress}
