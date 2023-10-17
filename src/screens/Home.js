@@ -1,8 +1,6 @@
-import { View, Text } from 'react-native'
+import React from 'react';
+import BottomTabs from '../navigation/BottomTabs';
+
 export default function Home() {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
-    </View>
-  )
+  return <BottomTabs />;
 }
